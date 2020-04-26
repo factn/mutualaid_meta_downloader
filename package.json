@@ -1,0 +1,17 @@
+{
+  "name": "Mutual Aid Group Downloaders",
+  "version": "0.0.1",
+  "description": "Downloads data from lists of mutual aid hubs",
+  "main": "download_mutual_aid_hub.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPLv3",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "json2csv": "^5.0.0",
+    "json5": "^2.1.3",
+    "underscore": "^1.10.2"
+  }
+}

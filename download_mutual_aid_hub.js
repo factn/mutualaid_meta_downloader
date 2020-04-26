@@ -28,13 +28,21 @@ async function getDataForPage(url) {
     //console.log(data.documents[2].fields)
    
     var mapped = _.flatten(_.map(data.documents, function(doc) {
-        return {
-            "name": doc.fields.title.stringValue,
-            "city": doc.fields.city.stringValue,
-            "general_url": doc.fields.generalForm.stringValue,
-            "country": doc.fields.country.stringValue,
-            "address": doc.fields.address.stringValue,
-            "state": doc.fields.state.stringValue
+        var supportForm = doc.fields.supportOfferForm.stringValue;
+        var offerForm = doc.fields.supportOfferForm.stringValue;
+        var facebookPage = doc.fields.facebookPage.stringValue;  
+        var generalForm = doc.fields.generalForm.stringValue;
+    
+        return {    
+            "Name": doc.fields.title.stringValue,
+            "Listing Source": "",
+            "Homepage": generalForm ? generalForm : facebookPage ? facebookPage : supportForm ? supportForm : offerForm,
+            "OfferOrRequestForm": supportForm ? supportForm : offerForm, 
+            "SocialMedia": facebookPage,
+            "City": doc.fields.city.stringValue,
+            "State": doc.fields.state.stringValue,
+            "Country": doc.fields.country.stringValue,
+            "Address": doc.fields.address.stringValue
         }
 
     }));

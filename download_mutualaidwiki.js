@@ -35,19 +35,16 @@ async function getDataFromMutualAidWiki() {
         var facebook = (homepage.includes("facebook.com")) ?
             homepage : "";
 
-        if (homepage==="https://covidmutualaid.org")
-            homepage = ""
-
         return {    
             "Name": doc.name,
             "Listing Source": "mutualaid.wiki",
             "Homepage": homepage,
             "OfferOrRequestForm": "", 
-            "SocialMedia": facebook,
-            "City": doc.location_name,
-            "State": "",
-            "Country": "UK",
-            "Address": doc.location_name
+            "Facebook": facebook,
+            "Locality": doc.location_name,
+            "Address": "",
+            "Lat": doc.location_coord.lat,
+            "Lng": doc.location_coord.lng 
         }
 
     }));

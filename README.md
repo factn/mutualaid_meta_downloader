@@ -11,7 +11,11 @@ This is a ResilienceApp internal tool, for analysis and review purposes only. It
 
 ## Installation
 
+Install node 10.xx or above.
+
 ```
+git clone git@github.com:factn/mutualaid_meta_downloader.git
+cd mutualaid_meta_downloader
 npm i
 ```
 
@@ -35,8 +39,8 @@ node parse_reach4help_markers.js > reach4help.csv
 node dedupe_and_merge.js > all_data.csv 
 ```
 
-                                      
-
 ## Data
 
-node download_recovers_org.js > 
+Last time the script was run it produced..
+
+[all_data.csv](https://github.com/factn/mutualaid_meta_downloader/raw/master/all_data.csv)

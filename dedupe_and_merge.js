@@ -57,7 +57,7 @@ function merge(row, other) {
                     row.ListingSources 
                     + "," + other.ListingSource,
             "ListingSourceIds": 
-                    row.ListingSourcesId 
+                    row.ListingSourceIds 
                     + "," + other.ListingSourceId,
         }
         // console.log("Merging");
@@ -93,7 +93,7 @@ function forceSchema(row) {
         "Tags": row.Tags,
         "Notes": row.Notes,
         "ListingSources": row.ListingSource,
-        "ListingSourcesId": row.ListingSourceId
+        "ListingSourceIds": row.ListingSourceId
     }
 }
 

@@ -164,7 +164,7 @@ function guessClassification(
             "Notes": "",
             "ListingSource": listingSource,
             "ListingSourceId": null,
-            "ListingSourceUpdated": "2020-04-01",
+            "ListingSourceUpdated": null,
         }
 
 

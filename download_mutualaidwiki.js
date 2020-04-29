@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 const _ = require('underscore')
-//const csv = require('csvtojson')
+const csv = require('csvtojson')
 const { Parser } = require('json2csv');
 const axios = require("axios");
 
@@ -13,7 +13,25 @@ function splitLines(t) {
 }
 
 
-async function getDataFromMutualAidWiki() {
+//manualClassifications load from 'manual_classification.csv'
+function guessClassification(
+    name, homepage, manualClassifications) {
+
+    var manual = _.findWhere(manualClassifications,  { "name": "" + name} );
+    if (manual)
+        return manual["classification"];
+    
+    if (homepage.includes("facebook"))
+        return "FacebookMutualAid";
+
+    if (homepage.includes("nextdoor"))
+        return "NextdoorMutualAid";
+
+    return "";
+}
+
+
+async function getDataFromMutualAidWiki(manualClassifications) {
 
     const url = "https://mutualaid.wiki/api/group/get"
    
@@ -34,17 +52,31 @@ async function getDataFromMutualAidWiki() {
         var homepage = "" + doc.link_facebook;
         var facebook = (homepage.includes("facebook.com")) ?
             homepage : "";
+        var name = doc.name;
+        var listingSource = "mutualaid.wiki";
 
-        return {    
-            "Name": doc.name,
-            "Listing Source": "mutualaid.wiki",
+        var classification = guessClassification(name, homepage, manualClassifications)
+
+        return {  
+            "Name": name,
+            "Classification": classification,
             "Homepage": homepage,
-            "OfferOrRequestForm": "", 
-            "Facebook": facebook,
-            "Locality": doc.location_name,
-            "Address": "",
+            "SocialMedia": facebook,
+            "Locality":  doc.location_name,
             "Lat": doc.location_coord.lat,
-            "Lng": doc.location_coord.lng 
+            "Lng": doc.location_coord.lng,
+            "Address": doc.location_name,
+            "Country": "",
+            "Description": doc.description,  
+            "SupportRequest": "",
+            "SupportOffer": "",
+            "Hotline": doc.contact ? doc.contact.phone : "",
+            "Tags": "",
+            "Notes": "",
+            "ListingSource": listingSource,
+            "ListingSourceId": doc.id,
+            "ListingSourceUpdated": doc.updated_at,
+            
         }
 
     }));
@@ -58,7 +90,10 @@ async function getDataFromMutualAidWiki() {
 (async () => {
 
 
-    var mapped = await getDataFromMutualAidWiki();
+    const manualClassifications  =  await csv()
+        .fromFile("manual_classifications.csv");
+
+    var mapped = await getDataFromMutualAidWiki(manualClassifications);
     
     //debug out 
     //console.log(JSON.stringify(mapped))

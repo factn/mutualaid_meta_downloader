@@ -1,0 +1,17 @@
+﻿NA Mutual Aid Groups,MutualAidWiki,Reach4Help,MutualAidHub,,,Aligned Field Names,Description
+Resource,Name,Name,Name,,,Name,Name or title of group 
+,Listing Source,Listing Source,Listing Source,,,Classification,Guess of classification
+Neighborhood/region,Locality,,,,,Homepage,General home page
+City,,City,City,,,SocialMedia,Facebook or nextdoor homepage 
+State/Territory,,,State,,,Locality,Short form 'city' or locality if any 
+Zip Code,,,,,,Lat,"Latitude, if known"
+Country,,,Country,,,Lng,Longitude if known
+Language(s),,,,,,Address,"Long form address, including country code if available"
+General,Homepage,Homepage,Homepage,,,Country,Country if known
+Support Request,OfferOrRequestForm,OfferOrRequestForm,OfferOrRequestForm,,,ListingSource,Where did this data come from?
+Support Offer,,,,,,Description,"Self description, if any"
+Social Media,Facebook,SocialMedia,SocialMedia,,,SupportRequest,"Support Request form, if any"
+Hotline #,,,,,,SupportOffer,"Support offer form, if any"
+,Lat,,,,,Hotline,"Hotline, if known"
+,Lng,,,,,Tags,Tags if any 
+,,,Address,,,Notes,"Notes, if any "

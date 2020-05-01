@@ -2,12 +2,15 @@
 
 Quick and dirty scripts to merge the common-fields of Mutual Aid like listings from a number of sources into one big list. 
 
-This is a ResilienceApp internal tool, for analysis and review purposes only. It is *not* intended to be a public replacement for the awesome work done at the following great sites, which are the true sources of this data and which continue to hold all relevant copyrights - not to mention much more detailed and up to date data. Go to the true sources for this information:
+This is a ResilienceApp internal tool, for analysis and review purposes only. It is *not* intended to be a public replacement for the awesome work done at the following great sites, which are the true sources of this data and which continue to hold all relevant copyrights - not to mention much more detailed and up to date data. 
+
+**Pleae visit the true and definitive sources for this information**:
 
 * http://reach4help.org 
 * http://mutualaidhub.org 
 * http://mutualaid.wiki
 * https://github.com/townhallproject/mutual-aid-networks (related to mutualaidhub)
+* https://recovers.org 
 
 ## Installation
 

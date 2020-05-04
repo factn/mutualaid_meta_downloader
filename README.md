@@ -15,8 +15,14 @@ Gathering as many mutual aid groups as possible, and merging/deduplicating them 
 #resilience-outreach
 
 # Problems:
-We need a natural language type parser to automate what kind of type of information each site has: How do we separate the bigger groups from the rest? How do we separate mutual aid groups from food banks/information sites, etc?
-Each site has a different data scheme.
+
+* We need a natural language type parser to automate what kind of type of information each site has:
+
+ How do we separate the bigger groups from the rest? 
+
+ How do we separate mutual aid groups from food banks/information sites, etc?
+
+* Each site has a different data scheme.
 
 # Sources to scrape:
 https://redaktor.ushahidi.io/views/data 

@@ -16,28 +16,27 @@ Gathering as many mutual aid groups as possible, and merging/deduplicating them 
 
 # Problems:
 
-* We need a natural language type parser to automate what kind of type of information each site has:
+ - We need a natural language type parser to automate what kind of type of information each site has:
 
- How do we separate the bigger groups from the rest? 
+ - How do we separate the bigger groups from the rest? 
 
- How do we separate mutual aid groups from food banks/information sites, etc?
+ - How do we separate mutual aid groups from food banks/information sites, etc?
 
-* Each site has a different data scheme.
+ - Each site has a different data scheme.
 
 # Sources to scrape:
-https://redaktor.ushahidi.io/views/data 
-https://www.ushahidi.com/covid 
-(has API)
-https://coronavirustechhandbook.com/mutual-aid-groups 
+- https://www.ushahidi.com/covid : Major source. Has Multiple sub groups.
+- https://coronavirustechhandbook.com/mutual-aid-groups 
 Groups creating mutual aid group lists (meta!)
 
 # Scraped so far:
-http://reach4help.org
-http://mutualaidhub.org
-http://mutualaid.wiki
-https://github.com/townhallproject/mutual-aid-networks (related to mutualaidhub)
-http://recovers.org/
-http://caremongering.nz/ (edited) 
+- http://reach4help.org
+- http://mutualaidhub.org
+- http://mutualaid.wiki
+- https://github.com/townhallproject/mutual-aid-networks (related to mutualaidhub)
+- http://recovers.org/
+- http://caremongering.nz/ (edited) 
+- https://redaktor.ushahidi.io/views/data 
 
 
 ## Installation
